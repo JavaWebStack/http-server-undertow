@@ -11,12 +11,12 @@
     </properties>
 
     <groupId>org.javawebstack</groupId>
-    <artifactId>http-server-undertow</artifactId>
+    <artifactId>http-router-undertow</artifactId>
     <version>${buildVersion}</version>
 
-    <name>http-server-undertow</name>
-    <description>An implementation of an undertow adapter for http-server</description>
-    <url>https://github.com/JavaWebStack/http-server-undertow</url>
+    <name>http-router-undertow</name>
+    <description>An implementation of an undertow adapter for http-router</description>
+    <url>https://github.com/JavaWebStack/http-router-undertow</url>
 
     <licenses>
         <license>
@@ -35,9 +35,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/JavaWebStack/http-server-undertow.git</connection>
-        <developerConnection>scm:git:ssh://github.com:JavaWebStack/http-server-undertow.git</developerConnection>
-        <url>https://github.com/JavaWebStack/http-server-undertow/tree/master</url>
+        <connection>scm:git:git://github.com/JavaWebStack/http-router-undertow.git</connection>
+        <developerConnection>scm:git:ssh://github.com:JavaWebStack/http-router-undertow.git</developerConnection>
+        <url>https://github.com/JavaWebStack/http-router-undertow/tree/master</url>
     </scm>
 
     <dependencies>

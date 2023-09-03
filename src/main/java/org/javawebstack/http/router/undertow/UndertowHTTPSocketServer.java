@@ -1,4 +1,4 @@
-package org.javawebstack.httpserver.undertow;
+package org.javawebstack.http.router.undertow;
 
 import io.undertow.Undertow;
 import io.undertow.server.handlers.BlockingHandler;
@@ -40,10 +40,10 @@ public class UndertowHTTPSocketServer implements IHTTPSocketServer {
                         httpServerExchange.upgradeChannel((streamConnection, httpServerExchange1) -> {
                             InputStream inputStream = new StreamSourceInputStream(streamConnection.getSourceChannel());
                             OutputStream outputStream = new StreamSinkOutputStream(streamConnection.getSinkChannel());
-                            handler.handle(new org.javawebstack.httpserver.undertow.UndertowHTTPSocket(httpServerExchange1, inputStream, outputStream));
+                            handler.handle(new UndertowHTTPSocket(httpServerExchange1, inputStream, outputStream));
                         });
                         httpServerExchange.putAttachment(WebSocketVersion.ATTACHMENT_KEY, WebSocketVersion.V13);
-                        if(!WebSocketUtil.accept(new org.javawebstack.httpserver.undertow.UndertowHTTPSocket(httpServerExchange, null, null), null))
+                        if(!WebSocketUtil.accept(new UndertowHTTPSocket(httpServerExchange, null, null), null))
                             return;
                         httpServerExchange.endExchange();
                     } else {
