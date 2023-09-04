@@ -3,9 +3,9 @@ package org.javawebstack.http.router.undertow;
 import io.undertow.Undertow;
 import io.undertow.server.handlers.BlockingHandler;
 import io.undertow.websockets.core.WebSocketVersion;
-import org.javawebstack.httpserver.adapter.IHTTPSocketHandler;
-import org.javawebstack.httpserver.adapter.IHTTPSocketServer;
-import org.javawebstack.httpserver.util.websocket.WebSocketUtil;
+import org.javawebstack.http.router.adapter.IHTTPSocketHandler;
+import org.javawebstack.http.router.adapter.IHTTPSocketServer;
+import org.javawebstack.http.router.util.websocket.WebSocketUtil;
 import org.xnio.Options;
 
 import java.io.IOException;

@@ -3,9 +3,9 @@ package org.javawebstack.http.router.undertow;
 import io.undertow.server.HttpServerExchange;
 import io.undertow.util.HeaderValues;
 import io.undertow.util.HttpString;
-import org.javawebstack.httpserver.HTTPMethod;
-import org.javawebstack.httpserver.HTTPStatus;
-import org.javawebstack.httpserver.adapter.IHTTPSocket;
+import org.javawebstack.http.router.HTTPMethod;
+import org.javawebstack.http.router.HTTPStatus;
+import org.javawebstack.http.router.adapter.IHTTPSocket;
 
 import java.io.IOException;
 import java.io.InputStream;
