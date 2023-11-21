@@ -43,7 +43,7 @@ public class UndertowHTTPSocketServer implements IHTTPSocketServer {
                             handler.handle(new UndertowHTTPSocket(httpServerExchange1, inputStream, outputStream));
                         });
                         httpServerExchange.putAttachment(WebSocketVersion.ATTACHMENT_KEY, WebSocketVersion.V13);
-                        if(!WebSocketUtil.accept(new UndertowHTTPSocket(httpServerExchange, null, null), null))
+                        if(WebSocketUtil.accept(new UndertowHTTPSocket(httpServerExchange, null, null), null))
                             return;
                         httpServerExchange.endExchange();
                     } else {
