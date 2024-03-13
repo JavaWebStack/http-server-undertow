@@ -16,14 +16,14 @@ public class StreamSourceInputStream extends InputStream {
     }
 
     public synchronized int read() throws IOException {
-        byteBuffer.position(0);
+        ((java.nio.Buffer) byteBuffer).position(0);
         int r;
         while ((r = source.read(byteBuffer)) == 0)
             Thread.yield();
         if(r == -1)
             return -1;
-        byteBuffer.position(0);
-        return byteBuffer.get();
+        ((java.nio.Buffer) byteBuffer).position(0);
+        return byteBuffer.get() & 0xFF;
     }
 
 }
